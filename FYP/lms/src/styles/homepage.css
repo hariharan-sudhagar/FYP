@@ -1,0 +1,212 @@
+/* General Fix */
+/* Set the entire page background */
+body {
+    background-color: #f0f0f0; /* Change this to any color you prefer */
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Pushes footer to the bottom */
+    width: 100%;
+    min-height: 100vh; /* Ensures full screen height */
+    padding-top: 90px; /* ✅ Navbar height adjust */
+}
+
+/* Hero Section Fix */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 20px;
+    background: lightblue;
+    color: black;
+    padding: 45px;
+    border-radius: 20px;
+}
+
+/* Ensure Hero Content is Aligned */
+.hero-text {
+    width: 50%;
+    text-align: left;
+}
+
+.hero-image {
+    width: 40%;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Courses Carousel Fix */
+.courses-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px 0;
+    position: relative;
+}
+/* Tech Stack Section */
+.techstack-wrapper {
+    position: relative;
+    width: 100%;
+    background-color: #f0f0f0; /* Updated Background */
+    padding: 30px 0;
+    overflow: hidden;
+  }
+  
+  .techstack-container {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    mask-image: linear-gradient(to right, transparent, #f0f0f0 10%, #f0f0f0 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, #f0f0f0 10%, #f0f0f0 90%, transparent);
+  }
+  
+  .techstack-carousel {
+    display: flex;
+    gap: 20px;
+    white-space: nowrap;
+    padding: 10px 0;
+  }
+  
+  /* Tech Stack Item */
+  .techstack-item {
+    background: #2a2a2a;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Continuous Scrolling Animations */
+  @keyframes scroll-left {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  @keyframes scroll-right {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+  
+  .scroll-left {
+    animation: scroll-left 40s linear infinite;
+  }
+  
+  .scroll-right {
+    animation: scroll-right 40s linear infinite;
+  }
+  
+  /* Shadow Effect */
+  .techstack-wrapper::before,
+  .techstack-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    z-index: 2;
+  }
+  
+  .techstack-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(240, 240, 240, 1), transparent);
+  }
+  
+  .techstack-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(240, 240, 240, 1), transparent);
+  }
+  
+  
+  
+.course-item {
+    background:whitesmoke;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    margin: 0 50px; /* Adds space between the two cards */
+    display: inline-block; /* Ensures cards stay inline */
+}
+
+  
+  .course-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .course-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .rating {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+  
+  .language {
+    font-size: 14px;
+    opacity: 0.8;
+    display: block;
+  }
+  
+  .view-details {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .view-details:hover {
+    background: #e68900;
+  }
+  
+
+
+
+  
+
+
+
+.footer {
+    width: 100%;
+    background: #222;
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+

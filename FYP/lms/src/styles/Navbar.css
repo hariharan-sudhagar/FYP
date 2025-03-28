@@ -1,0 +1,168 @@
+/* Floating Navbar Fix */
+.floating-navbar {
+    position: fixed;
+    top: 0;
+    left: 0; /* ✅ Start from the very left */
+    width: 100%; /* ✅ Full-width navbar */
+    height: 70px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px; /* ✅ Reduced padding to fit icons */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    box-sizing: border-box; /* ✅ Prevents overflow */
+    overflow: hidden; /* ✅ Ensures no content spills out */
+  }
+  
+  /* Container for navigation items */
+  .nav-content {
+    width: 100%;
+    max-width: 1200px; /* ✅ Restrict max width */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Fix right-side icons */
+  .nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0; /* ✅ Prevents icons from shrinking */
+  }
+  
+  /* Ensure icons remain inside the screen */
+  .nav-icons img, .nav-icons svg {
+    max-width: 30px; /* ✅ Restrict size */
+    height: auto;
+  }
+  
+  
+  /* Logo Fix */
+  .logo {
+    height: 150px; /* ✅ Increase height (adjust as needed) */
+    width: auto; /* ✅ Maintain aspect ratio */
+  }
+  
+  /* Center Navigation Links */
+  .nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    position: relative;
+    left: 0;
+    transform: none;
+  }
+  .search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2); /* Transparent white */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 30px;
+    padding: 8px 15px;
+    width: 220px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .search-container:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .search-icon {
+    font-size: 16px;
+    color: #333; /* Darker icon for visibility */
+    position: absolute;
+    left: 12px;
+  }
+  
+  .search-bar {
+    width: 100%;
+    padding: 10px 10px 10px 35px; /* Left padding for icon space */
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+    background: rgba(255, 255, 255, 0.5); /* Light transparent */
+  }
+  
+  .search-bar::placeholder {
+    color: #666;
+    font-size: 14px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .search-bar:focus::placeholder {
+    color: #bbb;
+  }
+  
+  
+  /* Navbar Icons Fix */
+  .nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* ✅ Adds spacing between icons */
+  }
+  
+  .icon {
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .icon:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Profile Dropdown Fix */
+  .profile-dropdown {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: rgba(255, 255, 255, 0.8); /* ✅ Transparent Effect */
+    backdrop-filter: blur(10px); /* ✅ Blur Effect */
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 160px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Show Dropdown */
+  .profile-container:hover .profile-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  /* Dropdown List Items */
+  .profile-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .profile-dropdown li {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    border-radius: 6px;
+  }
+  
+  .profile-dropdown li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+  }
+  
+  .profile-dropdown li:hover {
+    background: rgba(255, 255, 255, 0.3); /* ✅ Subtle Hover Effect */
+    font-weight: 600;
+  }
