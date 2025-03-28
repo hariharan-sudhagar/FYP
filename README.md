@@ -1,4 +1,4 @@
-# LMS Project Dependencies and Explanation
+# LMS Project 
 
 ## **Project Overview**
 The Learning Management System (LMS) is a full-stack web application built using the MERN stack with Next.js for enhanced frontend capabilities. The system supports course management, user authentication, video-based learning, progress tracking, and a real-time chat room. Below are the essential dependencies required for the project.
